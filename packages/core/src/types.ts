@@ -167,6 +167,7 @@ export type ExtractStateValue<
       ? never
       : {
           [K in KeysWithStates<TSchema['states']>]?: ExtractStateValue<
+            // @ts-ignore
             TSchema['states'][K]
           >;
         });
